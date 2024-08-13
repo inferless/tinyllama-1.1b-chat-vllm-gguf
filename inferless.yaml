@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Llama-2-7B-Chat-GGUF
+name: vLLM-GGUF-model-template
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -38,6 +38,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Llama-2-7B-Chat-GGUF.git
+model_url: https://github.com/inferless/vLLM-GGUF-model-template.git
 provider: GITHUB
 io_schema: true
