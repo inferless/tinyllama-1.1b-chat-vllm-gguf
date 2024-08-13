@@ -1,5 +1,5 @@
-# Deploy Llama-2-7B-Chat-GGUF using Inferless
-[Llama-2-7B-Chat-GGUF](https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF) model is part of Meta's Llama 2 model family, which is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. This is the repository for the quantized GGUF 7B fine-tuned model, optimized for dialogue use cases. 
+# Deploying GGUF Models with vLLM on Inferless
+This repository provides a template for seamlessly deploying GGUF models using [vLLM](https://github.com/vllm-project/vllm) on the Inferless platform.
 
 ### Fork the Repository
 Get started by forking the repository. You can do this by clicking on the fork button in the top right corner of the repository page.
@@ -58,7 +58,7 @@ curl --location '<your_inference_url>' \
           "datatype": "FP32"
         },
         {
-          "name": "repeat_penalty",
+          "name": "repetition_penalty",
           "optional": true,
           "shape": [1],
           "data": [1.18],
@@ -96,8 +96,8 @@ def infer(self, inputs):
     system_prompt = inputs.get("system_prompt","You are a friendly bot.")
     temperature = inputs.get("temperature",0.7)
     top_p = inputs.get("top_p",0.1)
-    top_k = inputs.get("top_k",40)
-    repeat_penalty = inputs.get("repeat_penalty",1.18)
+    top_k = int(inputs.get("top_k",40))
+    repetition_penalty = inputs.get("repetition_penalty",1.18)
     max_tokens = inputs.get("max_tokens",256)
 ```
 
