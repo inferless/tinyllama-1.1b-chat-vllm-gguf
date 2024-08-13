@@ -1,0 +1,7 @@
+build:
+  cuda_version: "12.1.1"
+  python_packages:
+    - "huggingface-hub==0.24.5"
+  run:
+    - 'CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python==0.2.85'
+
