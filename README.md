@@ -17,7 +17,7 @@ Go into the `inferless.yaml` and replace `<YOUR_NFS_VOLUME_MOUNT_PATH>` with you
 ### Import the Model in Inferless
 Log in to your inferless account, select the workspace you want the model to be imported into and click the Add Model button.
 
-Select the PyTorch as framework and choose **Repo(custom code)** as your model source and select your provider, and use the forked repo URL as the **Model URL**.
+Choose **Github** as your model source from the provider list, and use the forked repo URL as the **GitHub Repository** and select the **Branch**.
 
 Enter all the required details to Import your model. Refer [this link](https://docs.inferless.com/integrations/git-custom-code/git--custom-code) for more information on model import.
 
