@@ -3,5 +3,5 @@ build:
   python_packages:
     - "huggingface-hub==0.24.5"
   run:
-    - 'CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python==0.2.85'
-
+    - 'export VLLM_VERSION=0.5.4'
+    - 'pip install https://vllm-wheels.s3.us-west-2.amazonaws.com/nightly/vllm-${VLLM_VERSION}-cp38-abi3-manylinux1_x86_64.whl'
