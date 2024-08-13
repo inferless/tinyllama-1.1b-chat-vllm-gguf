@@ -23,7 +23,7 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': [0.1]
     },
-    "repeat_penalty": {
+    "repetition_penalty": {
         'datatype': 'FP32',
         'required': False,
         'shape': [1],
