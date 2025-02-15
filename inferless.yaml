@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Tinyllama-1.1B-chat-vLLM-GGUF
+name: tinyllama-1.1b-chat-vllm-gguf
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -41,6 +41,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Tinyllama-1.1B-chat-vLLM-GGUF.git
+model_url: https://github.com/inferless/tinyllama-1.1b-chat-vllm-gguf.git
 provider: GITHUB
 io_schema: true
