@@ -1,6 +1,8 @@
 build:
   cuda_version: "12.1.1"
   python_packages:
-    - "huggingface-hub==0.24.5"
+    -  "huggingface-hub==0.24.5"
     -  "vllm==0.7.2"
     -  "gguf==0.10.0"
+    -  "hf-transfer==0.1.9"
+    -  "huggingface-hub==0.27.1"
