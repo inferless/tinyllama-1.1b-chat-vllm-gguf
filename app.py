@@ -5,7 +5,7 @@ from vllm import LLM, SamplingParams
 
 class InferlessPythonModel:
     def initialize(self):        
-        nfs_volume = os.getenv("NFS_VOLUME")
+        nfs_volume = os.getenv("NFS_VOLUME","temp")
         if os.path.exists(nfs_volume + "/tinyllama-1.1b-chat-v1.0.Q4_0.gguf") == False :
             cache_file = hf_hub_download(
                                 repo_id="TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF",
